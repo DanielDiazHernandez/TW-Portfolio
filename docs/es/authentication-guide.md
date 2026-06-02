@@ -33,7 +33,7 @@ DemoPay cuenta con dos ambientes:
 > ### ℹ️Tipos de ambientes 
 >
 > Utiliza siempre el ambiente sandbox para realizar pruebas de tus integraciones antes de enviar solicitudes en producción.
-<br></br>
+
 
 ## Obtener credenciales
 
@@ -48,7 +48,8 @@ Para obtener tus credenciales de integración:
 > ### ⚠️Importante
 >
 > No compartas tu `merchant_secret` ni lo expongas en documentaciones públicas, aplicaciones frontend o herramientas de colaboración.
-<br></br>
+
+
 ## Generar un Bearer Token
 
 Para generar un Bearer Token, envía una solicitud `POST` al endpoint de autenticación.
