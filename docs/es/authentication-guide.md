@@ -63,11 +63,11 @@ POST /auth/token
 ### Request
 
 ```bash
-curl --request POST 'https://api.sandbox.demopay.com/v1/auth/token' \
+curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
   --header 'Content-Type: application/json' \
   --data-raw '{
-    "client_id": "demo_client_id",
-    "client_secret": "demo_client_secret"
+    "merchant_id": "demo_merchant_id",
+    "merchant_secret": "demo_merchant_secret"
   }'
 ```
 
@@ -75,10 +75,10 @@ curl --request POST 'https://api.sandbox.demopay.com/v1/auth/token' \
 
 | Parámetro       | Tipo   | Requerido | Descripción                                              |
 | --------------- | ------ | --------- | -------------------------------------------------------- |
-| `client_id`     | string | Sí        | Identificador público de la integración.                 |
-| `client_secret` | string | Sí        | Llave privada utilizada para generar el token de acceso. |
+| `merchant_id`     | string | Sí        | Identificador único del comercio.                 |
+| `merchant_secret` | string | Sí        | Llave privada del comercio utilizada para generar el token de acceso. |
 
-### Response exitoso
+### Ejemplo de respuesta de generación exitosa
 
 ```json
 {
@@ -92,9 +92,31 @@ curl --request POST 'https://api.sandbox.demopay.com/v1/auth/token' \
 
 | Campo          | Tipo    | Descripción                                          |
 | -------------- | ------- | ---------------------------------------------------- |
-| `access_token` | string  | Token que debes enviar en el header `Authorization`. |
+| `access_token` | string  | Token que debes colocar en el header `Authorization`. |
 | `token_type`   | string  | Tipo de token generado. En este caso, `Bearer`.      |
 | `expires_in`   | integer | Tiempo de vigencia del token, expresado en segundos. |
+
+
+### Ejemplo de respuesta de generación rechazada
+
+**HTTP status:** `401 Unauthorized`
+
+```json
+{
+  "error": {
+    "code": "INVALID_CREDENTIALS",
+    "message": "Las credenciales del comercio son inválidas. Verifica tu merchant_id y merchant_secret e inténtalo nuevamente."
+  }
+}
+```
+
+### Campos del response
+
+| Campo | Tipo | Descripción |
+|---|---|---|
+| `error` | object | Objeto que contiene la información del error de autenticación. |
+| `error.code` | string | Código interno del error. Para credenciales inválidas, el valor es `INVALID_CREDENTIALS`. |
+| `error.message` | string | Mensaje que indica que las credenciales enviadas son inválidas. |
 
 ## Usar el Bearer Token
 
