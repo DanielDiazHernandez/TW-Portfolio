@@ -80,6 +80,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 
 ### Ejemplo de respuesta de generación exitosa
 
+**HTTP status:** `200 OK`
 ```json
 {
   "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.demo-token",
@@ -115,12 +116,12 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 | Campo | Tipo | Descripción |
 |---|---|---|
 | `error` | object | Objeto que contiene la información del error de autenticación. |
-| `error.code` | string | Código interno del error. Para credenciales inválidas, el valor es `INVALID_CREDENTIALS`. |
-| `error.message` | string | Mensaje que indica que las credenciales enviadas son inválidas. |
+| `error.code` | string | Código interno del error. |
+| `error.message` | string | Mensaje que indica el motivo del rechazo. Consulta los motivos de rechazo en el siguiente [artículo](www.nexuspay.com/motivos-de-rechazo/bearer-token)|
 
 ## Usar el Bearer Token
 
-Después de generar el token, inclúyelo en el header `Authorization` de cada solicitud a la API.
+Una vez generado tu Bearer Token, puedes incluirlo en el header `Authorization` de cada solicitud a la API de NexusPay.
 
 ### Formato del header
 
@@ -131,7 +132,7 @@ Authorization: Bearer {{access_token}}
 ### Ejemplo de request autenticada
 
 ```bash
-curl --request GET 'https://api.sandbox.demopay.com/v1/payments/payment_123456' \
+curl --request GET 'https://api.sandbox.nexuspay.com/v1/payments/payment_123456' \
   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.demo-token' \
   --header 'Content-Type: application/json'
 ```
@@ -153,7 +154,7 @@ Para continuar enviando solicitudes, genera un nuevo token usando tus credencial
 }
 ```
 
-## Errores comunes de autenticación
+## Motivos de rechazo
 
 | Código HTTP | Código de error       | Descripción                                                             |
 | ----------- | --------------------- | ----------------------------------------------------------------------- |
