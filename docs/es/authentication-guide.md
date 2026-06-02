@@ -118,6 +118,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 | `error` | object | Objeto que contiene la información del error de autenticación. |
 | `error.code` | string | Código interno del error. |
 | `error.message` | string | Mensaje que indica el motivo del rechazo. Consulta los motivos de rechazo en el siguiente [artículo](www.nexuspay.com/motivos-de-rechazo/bearer-token)|
+<p>&nbsp;</p>
 
 ## Usar el Bearer Token
 
@@ -136,6 +137,7 @@ curl --request GET 'https://api.sandbox.nexuspay.com/v1/payments/payment_123456'
   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.demo-token' \
   --header 'Content-Type: application/json'
 ```
+<p>&nbsp;</p>
 
 ## Expiración del token
 
@@ -153,6 +155,7 @@ Para continuar enviando solicitudes, genera un nuevo token usando tus credencial
   }
 }
 ```
+<p>&nbsp;</p>
 
 ## Motivos de rechazo
 
@@ -163,6 +166,7 @@ Para continuar enviando solicitudes, genera un nuevo token usando tus credencial
 | `401`       | `AUTH_TOKEN_EXPIRED`  | El Bearer Token expiró.                                                 |
 | `401`       | `AUTH_TOKEN_INVALID`  | El Bearer Token es inválido o fue modificado.                           |
 | `403`       | `FORBIDDEN`           | Las credenciales no tienen permisos para acceder al recurso solicitado. |
+<p>&nbsp;</p>
 
 ## Buenas prácticas
 
@@ -175,6 +179,7 @@ Para mantener segura tu integración:
 * Genera un nuevo token cuando el actual expire.
 * Usa credenciales diferentes para sandbox y producción.
 * Revoca y reemplaza tus credenciales si sospechas que fueron comprometidas.
+<p>&nbsp;</p>
 
 ## Ejemplo con variables de entorno
 
@@ -186,6 +191,7 @@ DEMO_PAY_CLIENT_SECRET=demo_client_secret
 ```
 
 Luego puedes usarlas en tu aplicación para generar el token de forma segura.
+<p>&nbsp;</p>
 
 ## Siguiente paso
 
