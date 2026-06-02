@@ -1,6 +1,6 @@
 # Autenticación
 
-> ###ℹ️Antes de empezar
+> ℹ️###Antes de empezar
 > 
 > Este es un ejemplo ficticio de una documentación técnica creado para fines de portafolio. Simula una API de pagos y no contiene información confidencial.
 
