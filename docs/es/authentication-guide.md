@@ -34,6 +34,7 @@ DemoPay cuenta con dos ambientes:
 >
 > Utiliza siempre el ambiente sandbox para realizar pruebas de tus integraciones antes de enviar solicitudes en producción.
 
+
 ## Obtener credenciales
 
 Para obtener tus credenciales de integración:
