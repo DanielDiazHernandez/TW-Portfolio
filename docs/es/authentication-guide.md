@@ -4,7 +4,7 @@
 > 
 > Este es un ejemplo ficticio de una documentación técnica creado para fines de portafolio. Simula una API de pagos y no contiene información confidencial.
 
-La API de NexusPay utiliza autenticación mediante Bearer Token para validar las solicitudes enviadas por los comercios. Esto permite cumplir con los altos estándares de privacida y seguridad en cada transacción.
+La API de NexusPay utiliza autenticación mediante Bearer Token para validar las solicitudes enviadas por los comercios. Esto permite cumplir con los altos estándares de privacidad y seguridad en cada transacción.
 
 Para realizar una solicitud de la API, debes incluir tu token de acceso en el header `Authorization` de cada una.
 <br></br>
