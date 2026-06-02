@@ -4,9 +4,10 @@
 > 
 > Este es un ejemplo ficticio de una documentación técnica creado para fines de portafolio. Simula una API de pagos y no contiene información confidencial.
 
-La API de NexusPay utiliza autenticación mediante **Bearer Token** para validar las solicitudes enviadas por los comercios. Esto permite cumplir con los altos estándares de privacida y seguridad en cada transacción.
+La API de NexusPay utiliza autenticación mediante Bearer Token para validar las solicitudes enviadas por los comercios. Esto permite cumplir con los altos estándares de privacida y seguridad en cada transacción.
 
 Para realizar una solicitud de la API, debes incluir tu token de acceso en el header `Authorization` de cada una.
+
 
 ## Requisitos
 
@@ -18,6 +19,7 @@ Antes de realizar una solicitud, asegúrate de contar con lo siguiente:
 * Tu `merchant_id`.
 * Un Bearer Token válido, ya sea genérico o de tu comercio.
 
+
 ## Ambientes disponibles
 
 DemoPay cuenta con dos ambientes:
@@ -27,8 +29,11 @@ DemoPay cuenta con dos ambientes:
 | Sandbox    | Ambiente de pruebas para validar integraciones sin procesar dinero real. | `https://api.sandbox.nexuspay.com/v1` |
 | Producción | Ambiente para procesar transacciones con fondos y datos reales. | `https://api.nexuspay.com/v1`         |
 
-> Tipos de ambientes 
+
+> ### ℹ️Tipos de ambientes 
+>
 > Utiliza siempre el ambiente sandbox para realizar pruebas de tus integraciones antes de enviar solicitudes en producción.
+
 
 ## Obtener credenciales
 
@@ -40,7 +45,10 @@ Para obtener tus credenciales de integración:
 4. Copia tu `merchant_id` y `merchant_secret`.
 5. Guarda tus credenciales en un lugar seguro.
 
-> Importante: no compartas tu `merchant_secret` ni lo expongas en repositorios públicos, aplicaciones frontend o herramientas de colaboración.
+> ### ⚠️Importante
+>
+> No compartas tu `merchant_secret` ni lo expongas en documentaciones públicas, aplicaciones frontend o herramientas de colaboración.
+
 
 ## Generar un Bearer Token
 
