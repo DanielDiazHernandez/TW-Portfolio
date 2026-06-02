@@ -147,6 +147,8 @@ Para continuar enviando solicitudes, debes generar un nuevo token usando tus cre
 
 ### Ejemplo de error por token expirado
 
+**HTTP status:** `401 Unauthorized`
+
 ```json
 {
   "error": {
