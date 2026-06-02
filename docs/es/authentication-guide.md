@@ -60,7 +60,7 @@ Para generar un Bearer Token, envía una solicitud `POST` al endpoint de autenti
 POST /auth/token
 ```
 
-### Request
+### Body Request
 
 ```bash
 curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
@@ -89,7 +89,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 }
 ```
 
-### Campos del response
+### Campos de respuesta existosa
 
 | Campo          | Tipo    | Descripción                                          |
 | -------------- | ------- | ---------------------------------------------------- |
@@ -111,7 +111,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 }
 ```
 
-### Campos del response
+### Campos de respuesta rechazada
 
 | Campo | Tipo | Descripción |
 |---|---|---|
@@ -130,7 +130,7 @@ Una vez generado tu Bearer Token, puedes incluirlo en el header `Authorization` 
 Authorization: Bearer {{access_token}}
 ```
 
-### Ejemplo de request autenticada
+### Ejemplo de request 
 
 ```bash
 curl --request GET 'https://api.sandbox.nexuspay.com/v1/payments/payment_123456' \
@@ -139,11 +139,11 @@ curl --request GET 'https://api.sandbox.nexuspay.com/v1/payments/payment_123456'
 ```
 <p>&nbsp;</p>
 
-## Expiración del token
+## Expiración de tu Bearer Token
 
-Los Bearer Tokens tienen una vigencia limitada. Cuando el token expire, la API responderá con un error `401 Unauthorized`.
+Tu Bearer Token cuenta con un tiempo límite. Cuando el token expire, la API responderá con un error `401 Unauthorized`.
 
-Para continuar enviando solicitudes, genera un nuevo token usando tus credenciales de integración.
+Para continuar enviando solicitudes, debes generar un nuevo token usando tus credenciales de integración.
 
 ### Ejemplo de error por token expirado
 
@@ -155,9 +155,19 @@ Para continuar enviando solicitudes, genera un nuevo token usando tus credencial
   }
 }
 ```
+
+### Campos de respuesta rechazada
+
+| Campo | Tipo | Descripción |
+|---|---|---|
+| `error` | object | Objeto que contiene la información del error de autenticación. |
+| `error.code` | string | Código interno del error. |
+| `error.message` | string | Mensaje que indica el motivo del rechazo. Consulta los motivos de rechazo en el siguiente [artículo](www.nexuspay.com/motivos-de-rechazo/bearer-token)|
 <p>&nbsp;</p>
 
 ## Motivos de rechazo
+
+A continuación se muestran posibles casos de rechazo desde NexusPay, junto con su código de error y descripción.
 
 | Código HTTP | Código de error       | Descripción                                                             |
 | ----------- | --------------------- | ----------------------------------------------------------------------- |
@@ -181,17 +191,6 @@ Para mantener segura tu integración:
 * Revoca y reemplaza tus credenciales si sospechas que fueron comprometidas.
 <p>&nbsp;</p>
 
-## Ejemplo con variables de entorno
-
-Puedes guardar tus credenciales como variables de entorno para evitar escribirlas directamente en el código.
-
-```bash
-DEMO_PAY_CLIENT_ID=demo_client_id
-DEMO_PAY_CLIENT_SECRET=demo_client_secret
-```
-
-Luego puedes usarlas en tu aplicación para generar el token de forma segura.
-<p>&nbsp;</p>
 
 ## Siguiente paso
 
