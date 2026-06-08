@@ -174,7 +174,7 @@ A continuación se muestran posibles casos de rechazo desde NexusPay, junto con 
 | Código HTTP | Código de error       | Descripción                                                             |
 | ----------- | --------------------- | ----------------------------------------------------------------------- |
 | `400`       | `INVALID_REQUEST`     | La solicitud no incluye todos los campos requeridos.                    |
-| `401`       | `INVALID_CREDENTIALS` | El `client_id` o `client_secret` es incorrecto.                         |
+| `401`       | `INVALID_CREDENTIALS` | El `merchant_id` o `merchant_secret` es incorrecto.                         |
 | `401`       | `AUTH_TOKEN_EXPIRED`  | El Bearer Token expiró.                                                 |
 | `401`       | `AUTH_TOKEN_INVALID`  | El Bearer Token es inválido o fue modificado.                           |
 | `403`       | `FORBIDDEN`           | Las credenciales no tienen permisos para acceder al recurso solicitado. |
@@ -184,7 +184,7 @@ A continuación se muestran posibles casos de rechazo desde NexusPay, junto con 
 
 Para mantener segura tu integración:
 
-* No compartas tu `client_secret`.
+* No compartas tu `merchant_secret`.
 * No expongas credenciales en aplicaciones frontend.
 * No subas tokens ni llaves privadas a repositorios públicos.
 * Usa variables de entorno para guardar credenciales.
@@ -194,8 +194,8 @@ Para mantener segura tu integración:
 <p>&nbsp;</p>
 
 
-## Siguiente paso
+## Siguientes pasos
 
-Después de configurar la autenticación, puedes enviar tu primera solicitud para crear un pago.
+Una vez configurada tu autenticación, puedes enviar tu primera solicitud para crear un pago.
 
 Consulta la guía [Crear un pago](./crear-pago.md) para continuar con la integración.
