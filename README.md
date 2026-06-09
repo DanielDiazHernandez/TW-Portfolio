@@ -29,19 +29,17 @@ TW-Portfolio/
 │
 ├── README.md
 │
-├── docs/
-│   ├── en/
-│   │   ├── authentication-guide.md
-│   │   ├── create-payment.md
-│   │   └── error-codes.md
-│   │
-│   └── es/
-│       ├── authentication-guide.md
-│       ├── create-payment.md
-│       └── error-codes.md
-│
-└── assets/
-    └── images/
+└── docs/
+   ├── en/
+   │   ├── authentication-guide.md
+   │   ├── create-payment.md
+   │   └── error-codes.md
+   │
+   └── es/
+       ├── guia-autenticacion.md
+       ├── crear-pago.md
+       └── codigos-errores.md
+
 ```
 <p>&nbsp;</p>
 
