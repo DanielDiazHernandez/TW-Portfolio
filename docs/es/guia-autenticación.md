@@ -78,7 +78,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 | `merchant_id`     | string | Sí        | Identificador único del comercio.                 |
 | `merchant_secret` | string | Sí        | Llave privada del comercio utilizada para generar el token de acceso. |
 
-### Ejemplo de respuesta de generación exitosa
+### Ejemplo de respuesta exitosa
 
 **HTTP status:** `200 OK`
 ```json
@@ -98,7 +98,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 | `expires_in`   | integer | Tiempo de vigencia del token, expresado en segundos. |
 
 
-### Ejemplo de respuesta de generación rechazada
+### Ejemplo de respuesta rechazada
 
 **HTTP status:** `401 Unauthorized`
 

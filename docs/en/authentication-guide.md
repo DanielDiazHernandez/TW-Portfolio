@@ -77,7 +77,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 | `merchant_id`     | string | Yes      | Unique merchant identifier.                             |
 | `merchant_secret` | string | Yes      | Merchant private key used to generate the access token. |
 
-### Successful generation response example
+### Successful response example
 
 **HTTP status:** `200 OK`
 
@@ -97,7 +97,7 @@ curl --request POST 'https://api.sandbox.nexuspay.com/v1/auth/token' \
 | `token_type`   | string  | Type of token generated. In this case, `Bearer`.         |
 | `expires_in`   | integer | Token validity period, expressed in seconds.             |
 
-### Rejected generation response example
+### Rejected response example
 
 **HTTP status:** `401 Unauthorized`
 
