@@ -57,9 +57,9 @@ TW-Portfolio/
 
 | Documento | Descripción |
 |---|---|
-| [Guía de autenticación](./docs/es/authentication-guide.md) | Explica cómo autenticar solicitudes a la API usando un Bearer Token. |
-| [Crear un pago](./docs/es/create-payment.md) | Muestra cómo crear una solicitud de pago con headers, parámetros y ejemplos. |
-| [Códigos de error](./docs/es/error-codes.md) | Documenta errores comunes de la API, sus causas y acciones recomendadas. |
+| [Guía de autenticación](./docs/es/guia-autenticación.md) | Explica cómo autenticar solicitudes a la API usando un Bearer Token. |
+| [Crear un pago](./docs/es/crear-pago.md) | Muestra cómo crear una solicitud de pago con headers, parámetros y ejemplos. |
+| [Códigos de error](./docs/es/codigos-errores.md) | Documenta errores comunes de la API, sus causas y acciones recomendadas. |
 <p>&nbsp;</p>
 
 ## Skills demonstrated
