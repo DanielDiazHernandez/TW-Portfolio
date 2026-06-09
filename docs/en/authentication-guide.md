@@ -15,7 +15,7 @@ Before making a request, make sure you have the following:
 * An active NexusPay account.
 * Access to the sandbox or production environment.
 * Your `merchant_id`.
-* Your `merchant_id`.
+* Your `merchant_secret`.
 * A valid Bearer Token, either generic or assigned to your merchant account. <br></br>
 
 ## Available environments

@@ -16,7 +16,7 @@ Antes de realizar una solicitud, asegúrate de contar con lo siguiente:
 * Una cuenta activa en NexusPay.
 * Acceso al ambiente sandbox o producción.
 * Tu `merchant_id`.
-* Tu `merchant_id`.
+* Tu `merchant_secret`.
 * Un Bearer Token válido, ya sea genérico o de tu comercio.
 <br></br>
 
